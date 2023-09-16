@@ -45,7 +45,9 @@ const SecondComp = ()=>{
                     </Text>
                 </Third>
             </Side1>
-            <Side2></Side2>
+            <Side2>
+                <Img src={img} />
+            </Side2>
         </Middle>
 
       </Wrapper2>
@@ -54,6 +56,18 @@ const SecondComp = ()=>{
 }
 
 export default SecondComp
+const Img = styled.img`
+    object-fit: cover;
+
+    @media screen and (max-width: 768px) {
+     height: 450px;
+     width: 390px;
+     bottom: 0px;
+     top: 0;
+     position: absolute;
+     /* z-index: 2; */
+    }
+`
 const H1 = styled.div`
     font-size: 20px;
     color: Black;
@@ -74,15 +88,25 @@ const P = styled.div`
 
     @media screen and (max-width: 768px) {
      font-size: 14px;
+     color: black;
     }
 `
 
 const Text = styled.div`
-width:450px;
+width:500px;
 height: 90px;
 /* background-color: green; */
 margin-right: 30px;
 margin-top: 16px;
+
+@media screen and (max-width: 768px) {
+    width:600px;
+     height: 90px;
+     font-size: 18px;
+     font-weight: bold;
+
+    }
+
 `
 const Circle1 = styled.div`
 width: 90px;
@@ -178,7 +202,7 @@ const Third = styled.div`
     flex-direction: row-reverse;
 
     @media screen and (max-width: 768px) {
-     height: 50px;
+        height: 80px;
      width: 100%;
     }
 
@@ -193,7 +217,7 @@ const Second = styled.div`
     flex-direction: row-reverse;
 
     @media screen and (max-width: 768px) {
-     height: 50px;
+        height: 80px;
      width: 100%;
     }
 `
@@ -201,14 +225,14 @@ const Second = styled.div`
 const First = styled.div`
     width: 100%;
     height: 130px;
-    /* background-color: yellow; */
+    /* background-color: yellow;s */
     text-align: end;
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
 
     @media screen and (max-width: 768px) {
-     height: 50px;
+     height: 80px;
      width: 100%;
     }
 `
@@ -223,23 +247,25 @@ flex-direction: column;
 
 @media screen and (max-width: 768px) {
      width: 100%;
+     height: 350px;
+     margin-top: -80px;
     }
 
 `
 const Side2 = styled.div`
-width: 35%;
+width: 39%;
 height: 580px;
 /* background-color: orange; */
-background-image: url(${img});
-background-size: cover;
-background-position: center;
 margin-left: -40px;
 margin-right: 19px;
 
 @media screen and (max-width: 768px) {
-     width: 35%;
-      height: 760px;
-      margin-top: 20px;
+    height: 400px;
+    width: 300px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     position: relative;
     }
 `
 
@@ -262,7 +288,6 @@ width: 100%;
 height: 160px;
 margin-top: 20px;
 /* background-color: red; */
-
 display: flex;
 justify-content: center;
 align-items: center;
