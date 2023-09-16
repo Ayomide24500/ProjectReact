@@ -6,7 +6,7 @@ import image2 from "../Assets/second.png"
 import image3 from "../Assets/third.png"
 import image4 from "../Assets/fourth.svg"
 import image5 from "../Assets/fifth.svg"
-import image6 from "../Assets/sixth.png"
+import image6 from "../Assets/Sixth.png"
 const ThirdComp = () => {
     return (
         <div>
@@ -267,4 +267,7 @@ const Wrapper = styled.div`
     width: 100%;
     height: 760px;
     background-image: url(${img1});
+    @media screen and (max-width: 768px) {
+    z-index: 1;
+    }
 `
