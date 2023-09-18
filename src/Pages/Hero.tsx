@@ -1,120 +1,97 @@
-import React from 'react'
 import styled from "styled-components"
+import image from "../Assets/about-1.png"
 import img from "../Assets/bg-1.jpg"
-import Image from "../Assets/about-1.png"
-
 const Hero = () => {
   return (
-    <Container>
-      <Dark>
+    <div>
+       <Container>
         <Wrapper>
-        <Left>
-          <h2>BEST WAY TO <span>PRESENT</span> YOUR APP</h2>
-          <p>We ensure quality & support. People love us & we love them. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
           <Holder>
-            <Button bg='#e74c3c' wd='160px' bd='none' ml=''>Learn more</Button>
-          <Button bg='transparent' wd='180px' bd='1px solid #fff' ml='14px'>Download Now</Button>
+            <H1>BEST WAY TO <span>PRESENT</span> YOUR APP</H1>
+            <H2>
+              We ensure quality & support. People love us & we love them. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </H2>
           </Holder>
-        </Left>
-        <Right>
-          <Img src={Image}/>
-        </Right>
-     </Wrapper>
-      </Dark>
-     
-    </Container>
+          <Image src={image} />
+        </Wrapper>
+       </Container>
+    </div>
   )
 }
-
 export default Hero
+const Image = styled.img`
+width: 100%;
+max-width: 450px;
+height:400px;
+/* background-image: url(${image}); */
+background-position: center;
+object-fit: contain;
+background-repeat: no-repeat;
 
-const Dark = styled.div`
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 100px 0px;
-  justify-content: center;
- display: flex;
+@media (min-width: 1024px) {
+   width: 600px;
+}
 `
+const H2 = styled.h2`
+font-size: 17px;
+font-family: 'Nunito sans';
+color: #fff;
+line-height: 20px;
+`
+const H1 = styled.h1`
+width: 80%;
+font-size: 25px;
+/* background: #fff; */
+font-family: 'Quicksand';
+
+span{
+  color: #e74c3c;
+}
+
+
+@media (min-width: 1057px) {
+   width: 100%;
+   font-size: 30px;
+}
+`
+
 const Holder = styled.div`
-  display: flex;
-  margin-top: 35px;
+@media (min-width: 1024px) {
+  /* background-color: grey; */
+   width: 40%;
+}
+
 `
-const Button = styled.button<{bg: string, wd: string, bd: string, ml: string}>`
-  width: ${({ wd }) => wd};
-  background-color: ${({ bg }) => bg};
-  border: ${({ bd }) => bd};
-  margin-left: ${({ ml }) => ml};
-  height: 50px;
-  border-radius: 100px;
-  cursor: pointer;
-  color: #fff;
-`
-const Img = styled.img`
-  height: 95%;
-  @media screen and (max-width: 768px) {
-      height: 35%;
-  }
-`
-const Right = styled.div`
-  width: 55%;
-  display: flex;
-  justify-content: center;
-  @media screen and (max-width: 768px) {
-      width: 100%;
-      margin-top: 60px;
-      justify-content: center;
-      display: flex;
-      /* background-color: red; */
-  }
-`
-const Left = styled.div`
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-  h2{
-    color: #fff;
-    font-size: 37px;
-    font-weight: 600;
-    margin-bottom: 25px;
-    @media screen and (max-width: 768px) {
-      font-size: 30px;
-    }
-    span{
-      color:#e74c3c ;
-    }
-  }
-  p{
-    color: #fff;
-    margin: 0;
-    line-height: 31px;
-    @media screen and (max-width: 768px) {
-      font-size: 13px;
-      width: 80%;
-    }
-  }
-  @media screen and (max-width: 768px) {
-    width: 100%;
-  }
-`
+
 const Wrapper = styled.div`
-  width: 90%;
-  height: 100%;
-  display: flex;
+width: 90%;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+
+@media (min-width: 1057px) {
+   width: 80%;
+  justify-content: center;
+}
+@media (min-width: 1024px) {
+   width: 80%;
   justify-content: space-between;
-  align-items: center;
-  margin-top: 10px;
-  flex-wrap: wrap;
+}
+
 `
 
 const Container = styled.div`
-  width: 100%;
-  height: 100%;
-  /* background-color: red; */
-  background-image: url(${img});
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
+width: 100%;
+min-height: 100vh;
+height: 100%;
+background: rgba(000, 000,000, 50%);
+display: flex;
+justify-content: center;
+align-items: center;
+background-image: url(${img});
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+padding:80px 0px;
 `

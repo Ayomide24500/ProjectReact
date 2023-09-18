@@ -1,225 +1,222 @@
-import styled from "styled-components"
-import img from "../Assets/2phones.png"
-import img2 from "../Assets/small-screen.png"
+import styled from "styled-components";
+import big from "../Assets/big-screen.png";
+import small from "../Assets/small-screen.png";
+import HOWComponent from "../Components/ForthComp";
+import { BiBell, BiHeart, BiMessage, BiStar } from "react-icons/bi";
 
-const FourthComp = () => {
-    return (
-        <div>
-            <Container>
-              <Wrapper>
-                 <Image>
-                 <img src={img2} alt="" style={{position: "relative", left: "76px" }}/>
-                    <img src={img} alt="" style={{position: "relative", left: "0px", zIndex: "1"}}/>
-                 </Image>
-                 <Text>
-                    <Hold1>
-                    <H1>HOW IT <span>WORKS</span></H1>
-                  <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et<br />
-                   dolore aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt<br />
-                    ut labore et dolore aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</P>
-                    </Hold1>
-                    <Hold2>
-                        <H1>Benefits Of App</H1>
-                    </Hold2>
-                    <Hold3>
-                        <Right>
-                            <Up>
-                                <Hold>
-                                <H2>Notifications</H2>
-                                <P1>Lorem ipsum dolor sit amet, sed do consectetur adipisicing elit.</P1>
-                                </Hold>
-                            </Up>
-                            <Down>
-                            <Hold>
-                                <H2>Notifications</H2>
-                                <P1>Lorem ipsum dolor sit amet, sed do consectetur adipisicing elit.</P1>
-                                </Hold>
-                            </Down>
-                            <Button bg='#e74c3c' wd='130px' bd='none' ml='14px'>Download Now</Button>
-                        </Right>
-                        <Left>
-                        <Up>
-                                <Hold>
-                                <H2>Notifications</H2>
-                                <P1>Lorem ipsum dolor sit amet, sed do consectetur adipisicing elit.</P1>
-                                </Hold>
-                            </Up>
-                            <Down>
-                            <Hold>
-                                <H2>Notifications</H2>
-                                <P1>Lorem ipsum dolor sit amet, sed do consectetur adipisicing elit.</P1>
-                                </Hold>
-                            </Down>
-                        </Left>
-                    </Hold3>
-                 </Text>
-              </Wrapper>
-            </Container>
-            </div>
-    )
-}
-export default FourthComp
-const Button = styled.button<{bg: string, wd: string, bd: string, ml: string}>`
-  width: ${({ wd }) => wd};
-  background-color: ${({ bg }) => bg};
-  border: ${({ bd }) => bd};
-  margin-left: ${({ ml }) => ml};
-  height: 40px;
-  border-radius: 100px;
-  cursor: pointer;
-  color: #fff;
-  margin-top: 45px;
-`
-const Hold = styled.div`
-padding: 15px 0px 0px 7px;
-margin-left: 10px;
-/* background-color: red; */
-`
+const HOW = () => {
+  return (
+    <div>
+      <Container>
+        <Phone>
+          <mark>
+            <Img src={big} />
+          </mark>
+        </Phone>
+        <Info>
+          <TopWrapper>
+            <W>HOW IT WORKS</W>
+          </TopWrapper>
+          <div
+            style={{
+              display: "flex",
+            }}
+          >
+            <Line bcc="#e74f40ff">
+              <Ball />
+            </Line>
+            <Line bcc="grey"></Line>
+          </div>
+          <Wrapper>
+            <Text>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore aliqua. Lorem ipsum
+              dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore aliqua.Lorem ipsum dolor sit
+              amet, consectetur adipisicing elit.
+            </Text>
+          </Wrapper>
 
-const H2 = styled.div`
-font-size: 19px;
-font-weight: bold;
-padding-right: 9px;
-padding-bottom: 12px;
+          <Benefits>
+            <B>Benefits Of App</B>
+            <Components>
+              <div style={{ margin: "0", display: "flex", flexWrap: "wrap" }}>
+                <HOWComponent
+                  Licon={BiBell}
+                  Ltext="Notifications"
+                  Stext="Lorem ipsum dolor sit amet, sed do consectetur adipisicing elit."
+                  left="#bc5bddff"
+                  right="#ed56bcff"
+                />
+                <HOWComponent
+                  Licon={BiMessage}
+                  Ltext="24/7 Support"
+                  Stext="Lorem ipsum dolor sit amet, sed do consectetur adipisicing elit."
+                  left="#f1386aff"
+                  right="#fb6351ff"
+                />
+              </div>
+              <div style={{ margin: "0", display: "flex", flexWrap: "wrap" }}>
+                <HOWComponent
+                  Licon={BiStar}
+                  Ltext="Favourites"
+                  Stext="Lorem ipsum dolor sit amet, sed do consectetur adipisicing elit."
+                  left="#8584e8ff"
+                  right="#61c2e5ff"
+                />
+                <HOWComponent
+                  Licon={BiHeart}
+                  Ltext="Wishlist"
+                  Stext="Lorem ipsum dolor sit amet, sed do consectetur adipisicing elit."
+                  left="#bc5bddff"
+                  right="#ed56bcff"
+                />
+              </div>
+            </Components>
+            <Button>Learn More</Button>
+          </Benefits>
+        </Info>
+      </Container>
+    </div>
+  );
+};
 
-&:hover {
-    color:#e74c3c;
-}
-`
-const P1 = styled.div`
-font-size: 12px;
-padding-right: 8px;
-padding-bottom: 20px;
+export default HOW;
 
-`
-const Up = styled.div`
-    width: 100%;
-    height: 120px;
-    /* background-color: pink; */
-    display: flex;
-`
-const Down = styled.div`
-    width: 100%;
-    height: 120px;
-    /* background-color: green; */
-    margin-top: 15px;
-    display: flex;
+const B = styled.h1`
+  margin: 20px 0 0 0;
+  font-weight: 400;
+`;
 
-`
+// const Div = styled.div``;
 
-const Right = styled.div`
-width: 50%;
-height: 350px;
-/* background-color: silver; */
-display: flex;
-/* justify-content: space-around; */
-flex-direction: column;
-`
-const Left = styled.div`
-width: 50%;
-height: 350px;
-/* background-color: orangered; */
-`
+const Button = styled.button`
+  border: none;
+  border-radius: 40px;
+  color: white;
+  font-size: 18px;
+  background-color: #e74c3cff;
+  padding: 12px 17px;
 
-const H1 = styled.div`
-    font-size: 28px;
-    font-weight: bold;
-    padding-top: 20px;
-    padding-left: 12px;
+  &:hover {
+    transition: all 350ms;
+    background-color: black;
+    cursor: pointer;
+  }
 
-    span{
-      color:#e74c3c ;
-    }
-`
-const P = styled.div`
-font-size: 12px;
-line-height: 30px;
-padding-top: 5px;
-padding-left: 12px;
+  @media (max-width: 500px) {
+    margin-bottom: 12px;
+  }
+`;
 
-@media screen and (max-width: 768px) {
-    font-size: 12px;
-    line-height: 20px;
-    }
-`
-const Hold1 = styled.div`
-    width: 100%;
-    height: 150px;
-    /* background-color: silver; */
+const Components = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 10px;
+  margin-bottom: 30px;
+`;
 
-    @media screen and (max-width: 768px) {
-   height: 100px;
-   width: 100%;
-    }
-`
-const Hold2 = styled.div`
-    width: 100%;
-    height: 90px;
-    /* background-color: red; */
+const Benefits = styled.div`
+  height: 100%;
+  width: 100%;
+  flex-wrap: wrap;
+`;
 
-    @media screen and (max-width: 768px) {
-   font-size: 12px;
-   padding-top: 60px;
-    }
-`
-const Hold3 = styled.div`
-    width: 100%;
-    height: 350px;
-    /* background-color: orange; */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-`
-const Text = styled.div`
-    width: 50%;
-    height: 590px;
-    /* background-color: green; */
-    display: flex;
-    align-items: center;
+const Img = styled.img``;
+
+const Info = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 60%;
+
+  @media (max-width: 500px) {
+    width: 97%;
     justify-content: center;
-    flex-direction: column;
-`
+  }
+`;
 
-const Image = styled.div`
-    width: 30%;
-    height: 500px;
-    /* background-color: blue; */
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: row;
+const Text = styled.div`
+  font-weight: 500;
+  color: #9b9b9bff;
+  width: 70%;
 
-
-    @media screen and (max-width: 768px) {
-   height: 100px;
-   width: 100%;
-   display: none;
-   img{
-    height: 100px;
-   width: 100%;
-   }
-    }
-`
-const Wrapper = styled.div`
+  @media (max-width: 500px) {
     width: 100%;
-    height: 700px;
-    /* background-color: aqua; */
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+  }
+`;
 
-    @media screen and (max-width: 768px) {
-   display: flex;
-   flex-direction: column;
+const Wrapper = styled.div``;
+
+const Ball = styled.div`
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #e74f40ff;
+`;
+
+const TopWrapper = styled.div`
+  width: 100%;
+  display: flex;
+`;
+
+const Line = styled.div<{ bcc: string }>`
+  width: 50px;
+  height: 1px;
+  background-color: ${({ bcc }) => bcc};
+  display: flex;
+  align-items: center;
+  margin: 15px 0px;
+`;
+
+const W = styled.div`
+  width: 100%;
+  font-size: 36px;
+  font-weight: 400;
+  display: flex;
+`;
+
+const Phone = styled.div`
+  width: 36%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+
+  mark {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    background-image: url(${small});
+    background-repeat: no-repeat;
+    object-fit: contain;
+    background-position: center;
+    background-color: transparent;
+
+    @media (max-width: 500px) {
+      justify-content: center;
+      background-position: left;
     }
-`
+  }
+`;
+
 const Container = styled.div`
-    width: 100%;
-    height: 700px;
-    /* background-color: silver; */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  /* padding: 70px 0px 70px 0px; */
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 
-    @media screen and (max-width: 768px) {
-   display: flex;
-   flex-direction: column;
-    }
-`
+  @media (max-width: 500px) {
+    width: 100%;
+    justify-content: center;
+  }
+`;
