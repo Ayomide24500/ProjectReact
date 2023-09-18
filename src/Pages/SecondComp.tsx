@@ -57,6 +57,7 @@ const SecondComp = ()=>{
 
 export default SecondComp
 const Img = styled.img`
+<<<<<<< HEAD
     object-fit: contain;
 
     @media screen and (max-width: 768px) {
@@ -65,6 +66,15 @@ const Img = styled.img`
      bottom: 0px;
      top: 10px;
      left: 60px;
+=======
+    object-fit: cover;
+
+    @media screen and (max-width: 768px) {
+     height: 450px;
+     width: 390px;
+     bottom: 0px;
+     top: 0;
+>>>>>>> ba95583f9272a7f1577bf5f2fbe829a8bd376d42
      position: absolute;
      /* z-index: 2; */
     }
@@ -90,7 +100,11 @@ const P = styled.div`
     padding-left: 12px;
 
     @media screen and (max-width: 768px) {
+<<<<<<< HEAD
      font-size: 12px;
+=======
+     font-size: 14px;
+>>>>>>> ba95583f9272a7f1577bf5f2fbe829a8bd376d42
      color: black;
     }
 `
@@ -103,12 +117,20 @@ margin-right: 30px;
 margin-top: 16px;
 
 @media screen and (max-width: 768px) {
+<<<<<<< HEAD
     width:400px;
      height: 90px;
      font-size: 13px;
      font-weight: bold;
      position: relative;
      bottom: 12px;
+=======
+    width:600px;
+     height: 90px;
+     font-size: 18px;
+     font-weight: bold;
+
+>>>>>>> ba95583f9272a7f1577bf5f2fbe829a8bd376d42
     }
 
 `
@@ -208,7 +230,11 @@ const Third = styled.div`
 
     @media screen and (max-width: 768px) {
         height: 80px;
+<<<<<<< HEAD
         width: 100%;
+=======
+     width: 100%;
+>>>>>>> ba95583f9272a7f1577bf5f2fbe829a8bd376d42
     }
 
 `
@@ -252,8 +278,13 @@ flex-direction: column;
 
 @media screen and (max-width: 768px) {
      width: 100%;
+<<<<<<< HEAD
      height: 450px;
      margin-bottom: 40px;
+=======
+     height: 350px;
+     margin-top: -80px;
+>>>>>>> ba95583f9272a7f1577bf5f2fbe829a8bd376d42
     }
 
 `
